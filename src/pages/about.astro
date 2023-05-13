@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Johannes Kvarnström" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Om mig"
+				tagline=""
+			>
+				<img
+					width="553"
+					height="73"
+					src="/assets/johannes.jpg"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Bakgrund</h2>
+				<div class="content">
+					<p>
+						Kommer ifrån Stockholm och började med programmering 2021.
+					</p>
+					<p>
+					 Första erfarenheterna kom av utveckla simpla java projekt med BlueJ som var en bra miljö att börja med då allt var väldigt tydligt, visuellt, simpelt och man fick en 
+					 förståelse för objekt orienterat tänk och hur man använder det för att i sin tur sätta ihop olika system och funktionaliteter. Redan första terminen på universitet visade jag
+					 att jag inte ger upp när jag tillsammans med min studiekamrat satt uppe en hel natt för att bli klar med ett full-stack projekt till deadline.
+					</p>
+					<p>
+						Webbutvecklingen kom jag in på efter ett tag och efter en liten nybörjarperiod där mycket tankeverksamhet och energi gick åt att aklimatisera sig med de nya
+						programmeringsspråken och ramverken så föll jag rejält. Nu ägnar jag mig åt webbutveckling och ser ett stort värde i att hemsidor ska vara snygga moderna och framförallt 
+						anpassade för mobilanvändet som är här för att stanna.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Utbildning</h2>
+				<div class="content">
+					<p>- Gymnasiexamen - samhällskunskap på Bromma gymnasium</p>
+					<p>- Kandidatexamen - datavetenskap på Stockholms universitet pågående...</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>-Java, Java script, Type script, sql, Astro , html, css  (Jobbar helst i visual studio code men har använt ett gäng IDE:s under min studie tid)</p>
+					<p>- API - kan använda API:er och använda mig av taktiker för att skydda nycklar som att sätta upp proxy servers med cloudflare workers eller liknande om det skulle behövas.</p>
+					<p>- AI - ChatGPT, Midjourney, designs.ai och lumen5 är verktyg jag använder. </p>
+					<p>- Google - cloud console, google maps, google keyword planner och självklart google docs och liknande</p>
+				</div>
+				<h2 class="section-title">Mål</h2>
+				<div class="content">
+					<p>- Lära mig de modernaste teknikerna för att bygga webbsidor så att jag kan leverera hemsidor av hög kvalitet.</p>
+					<p>- I detta ingår att lära mig vad olika språk och frameworks har för styrkor och svagheter så att jag i framtiden kan välja rätt språk för rätt applikationer. </p>
+						<p>- Uttnyttja AI-verktygen och förbättra den förmågan på samma sätt som man var tvungen att lära sig googla på ett effektivt sätt. I dagsläget verkar midjourney
+							och ChatGPT väldigt intressanta men jag håller alternativen öppna för andra verktyg.
+						</p>
+						<p>- Tillsist lära mig mer om google verktygen för att använda på ett ännu mer effektivt vis.</p>
+					
+				
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

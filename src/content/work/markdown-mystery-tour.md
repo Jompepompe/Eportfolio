@@ -11,9 +11,23 @@ tags:
   - User Testing
 ---
 
-## <a href="https://wifixardittnat.se"> Wifixardittnat.se</a>
+#### <a href="https://wifixardittnat.se"> Wifixardittnat.se</a>
 
-> Skräddarsydd hemsida till företag. Simpelt bygd för att ha som företagets digitala ansikte.
+> Skräddarsydd hemsida till
+> företag. Simpelt bygd för 
+> att ha som företagets 
+> digitala ansikte.
 
-Hade personlig kontakt från början till slut och projektet var snabbt och lyckat. Kunden ville ha en basic hemsida för att ha närvaro på nätet.
+Hade personlig kontakt från början till slut 
+och projektet var snabbt och lyckat. Kunden 
+ville ha en basic hemsida för att ha närvaro
+ på nätet.
 
+<style>
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 18px;
+  }
+  /* add other styles here */
+}
+<style>
